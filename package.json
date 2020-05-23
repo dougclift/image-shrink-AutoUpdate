@@ -10,7 +10,7 @@
     "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
     "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds",
     "build": "electron-builder build --win --ia32 --publish never",
-    "deploy": "electron-builder build --win  --ia32 --publish always"
+    "deploy": "electron-builder build --win --ia32 --publish always"
   },
   "author": "Doug Clift",
   "license": "MIT",
