@@ -1,6 +1,6 @@
 {
   "name": "image-shrink",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "App to optimize images",
   "main": "main.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
     "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds",
-    "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "build": "electron-builder build --win --ia32 --publish never",
+    "deploy": "electron-builder build --win  --ia32 --publish always"
   },
   "author": "Doug Clift",
   "license": "MIT",
