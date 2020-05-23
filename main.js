@@ -9,7 +9,7 @@ const log = require("electron-log")
 const { autoUpdater } = require("electron-updater")
 
 // Set env
-process.env.NODE_ENV = "development"
+process.env.NODE_ENV = "production"
 const isDev = process.env.NODE_ENV !== "production" ? true : false
 
 // Check platform
