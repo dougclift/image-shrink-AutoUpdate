@@ -20,6 +20,7 @@ let aboutWindow
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
+    show: false,
     title: "ImageShrink",
     width: isDev ? 800 : 500,
     height: 600,
@@ -40,6 +41,8 @@ function createMainWindow() {
   mainWindow.loadFile(`${__dirname}/app/index.html`)
 
   mainWindow.once("ready-to-show", () => {
+    // console.log("window ready")
+    mainWindow.show()
     autoUpdater.checkForUpdatesAndNotify()
   })
 }
@@ -68,7 +71,7 @@ app.on("ready", () => {
   // globalShortcut.register("CmdOrCtrl+R", () => mainWindow.reload())
   // globalShortcut.register(isMac ? "Command+Alt+I" : "Ctrl+Shift+I", () => mainWindow.toggleDevTools())
 
-  mainWindow.on("ready", () => (mainWindow = null))
+  mainWindow.on("closed", () => (mainWindow = null))
 })
 
 // Menu
